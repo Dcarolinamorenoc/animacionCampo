@@ -128,7 +128,7 @@ body {
     /* Ajusta el retraso según sea necesario para que coincida con el momento deseado de aparición */
     animation-name: animacion-flor;
     animation-duration: 5s;
-    animation-delay: 26s; /* Retraso de 6 segundos antes de que la animación comience */
+    animation-delay: 29s; /* Retraso de 6 segundos antes de que la animación comience */
     animation-iteration-count: 1;
     animation-timing-function: ease;
     animation-direction: normal;
