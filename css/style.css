@@ -55,15 +55,16 @@ body {
 
 #lluvia {
     width: 200px;
-    height: 640%;
+    height: 700%;
     background-image: url("../storage/img/lluvia.png");
     background-repeat: no-repeat;
     background-position: 0 600%;
-    margin: 65px 0 0 0;
-    margin-top: 80px;
+    margin-left: 100px;
+    margin-top: 250px;
+    
   
     animation-name: animacion-lluvia;
-    animation-duration: 5s;
+    animation-duration: 10s;
     animation-delay: 12s;
     animation-iteration-count: 1;
     animation-timing-function: linear;
