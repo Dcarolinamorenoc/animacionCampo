@@ -60,7 +60,7 @@ body {
     background-repeat: no-repeat;
     background-position: 0 600%;
     margin-left: 100px;
-    margin-top: 250px;
+    margin-top: 270px;
     
   
     animation-name: animacion-lluvia;
@@ -72,6 +72,50 @@ body {
   }
  
   
+
+  #sol {
+    width: 200px;
+    height: 200px;
+    padding-right: 6vw;
+    position: absolute;
+    top: 0px; 
+    right: 3vw;
+    background: url("../storage/img/sol.webp") no-repeat top left;
+    background-size: contain;
+    margin-right: 150px;
+    opacity: 0; /* Ajusta la opacidad inicial según sea necesario */
+
+    /* Ajusta el retraso según sea necesario para que coincida con el final de la animación de la nube */
+    animation-delay: 25s; /* Ajusta este valor según la duración de la animación de la nube y cualquier retraso adicional que desees */
+    animation-name: sun;
+    animation-duration: 33s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+
+}
+
+
+
+#flor{
+    width: 20vw;
+    height: 10vw;
+    position: absolute;
+    bottom: 0vw;
+    left: 40vw;
+    opacity: 0;
+    background-image: url("../storage/img/flor.webp");
+
+    animation-name: flower;
+    animation-duration: 5s;
+    animation-delay: 6s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    animation-direction:normal;
+    animation-fill-mode: both;
+
+}
+
+
   
   /* Mensaje */
   
@@ -185,18 +229,67 @@ body {
     }
   }
   
+
+  
   /* Flor */
   
-  @keyframes animacion-flor {
-    100% {
-      background-position: 0 0;
+  @keyframes flower {
+    0% {
+        bottom: 0vw;
+        opacity: 0;
     }
-  }
+    100% {
+        bottom: 8vw;
+        opacity: 1;
+    }
+}
 
 
 
+@keyframes sun {
+    0% {
+        top: 0; /* Posición inicial ajustada para que el sol esté fuera de la pantalla */
+        opacity: 0;
+    }
+
+    30%{
+        top: 0; /* Posición final del sol en la parte superior de la pantalla */
+        opacity: 1; /* Mantener la opacidad al final de la animación */
+    }
+
+    100% {
+        top: 0; /* Posición final del sol en la parte superior de la pantalla */
+        opacity: 1; /* Mantener la opacidad al final de la animación */
+    }
+}
 
 
+#flor {
+    width: 20vw;
+    height: 10vw;
+    position: absolute;
+    bottom: 0;
+    left: 40vw;
+    opacity: 0;
+    background-size: contain;
 
+    /* Ajusta el retraso según sea necesario para que coincida con el momento deseado de aparición */
+    animation-name: animacion-flor;
+    animation-duration: 5s;
+    animation-delay: 6s; /* Retraso de 6 segundos antes de que la animación comience */
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
 
-  
+@keyframes animacion-flor {
+    0% {
+        bottom: 0; /* Posición inicial de la flor */
+        opacity: 0; /* Opacidad inicial */
+    }
+    100% {
+        bottom: 8vw; /* Posición final de la flor */
+        opacity: 1; /* Opacidad final */
+    }
+}
