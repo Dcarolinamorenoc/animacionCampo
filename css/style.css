@@ -103,7 +103,7 @@ body {
     bottom: 0vw;
     left: 40vw;
     opacity: 0;
-    background-image: url("../storage/img/flor.webp");
+    
 
     animation-name: flower;
     animation-duration: 5s;
@@ -114,6 +114,28 @@ body {
     animation-fill-mode: both;
 
 }
+
+#flor {
+    width: 20vw;
+    height: 10vw;
+    position: absolute;
+    bottom: 0;
+    margin-left: -250px;
+    background-image: url("../storage/img/flor.png");
+    opacity: 0;
+    background-size: contain;
+
+    /* Ajusta el retraso según sea necesario para que coincida con el momento deseado de aparición */
+    animation-name: animacion-flor;
+    animation-duration: 5s;
+    animation-delay: 26s; /* Retraso de 6 segundos antes de que la animación comience */
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+
+}
+
 
 
   
@@ -264,24 +286,7 @@ body {
 }
 
 
-#flor {
-    width: 20vw;
-    height: 10vw;
-    position: absolute;
-    bottom: 0;
-    left: 40vw;
-    opacity: 0;
-    background-size: contain;
 
-    /* Ajusta el retraso según sea necesario para que coincida con el momento deseado de aparición */
-    animation-name: animacion-flor;
-    animation-duration: 5s;
-    animation-delay: 6s; /* Retraso de 6 segundos antes de que la animación comience */
-    animation-iteration-count: 1;
-    animation-timing-function: ease;
-    animation-direction: normal;
-    animation-fill-mode: forwards;
-}
 
 @keyframes animacion-flor {
     0% {
@@ -289,7 +294,7 @@ body {
         opacity: 0; /* Opacidad inicial */
     }
     100% {
-        bottom: 8vw; /* Posición final de la flor */
+        bottom: 2vw; /* Posición final de la flor */
         opacity: 1; /* Opacidad final */
     }
 }
